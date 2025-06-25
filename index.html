@@ -1,57 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daily Time Record</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Practice Code</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-  <div class="dtr-container">
-    <h2>Daily Time Record</h2>
-
-    <label for="date">Date</label>
-    <input type="date" id="date">
-
-    <label for="name">Employee Name</label>
-    <input type="text" id="name" placeholder="e.g. John Doe">
-
-    <label for="timeIn">Time In</label>
-    <input type="time" id="timeIn">
-
-    <label for="timeOut">Time Out</label>
-    <input type="time" id="timeOut">
-
-    <button onclick="logTime()">Log Time</button>
-
-    <div class="log" id="log"></div>
+  <div class="dt-container">
+    <form>
+      <label for="Username">Username</label><br>
+      <input type="text" name="Usernamee" id="Username"><br>
+      <label for="Pasword">Password</label><br>
+      <input type="text" name="Password" id="Password"><br>
+      <input type="submit" value="Log In"><br>
+        
+    </form>
   </div>
+  
+  
 
-  <script>
-    function logTime() {
-      const date = document.getElementById('date').value;
-      const name = document.getElementById('name').value;
-      const timeIn = document.getElementById('timeIn').value;
-      const timeOut = document.getElementById('timeOut').value;
-      const log = document.getElementById('log');
-
-      if (!date || !name || !timeIn || !timeOut) {
-        alert("Please fill in all fields.");
-        return;
-      }
-
-      const entry = document.createElement('div');
-      entry.className = 'log-entry';
-      entry.textContent = `📅 ${date} | 👤 ${name} | 🕒 In: ${timeIn} | Out: ${timeOut}`;
-      log.appendChild(entry);
-
-      // Clear form fields
-      document.getElementById('name').value = '';
-      document.getElementById('timeIn').value = '';
-      document.getElementById('timeOut').value = '';
-    }
-  </script>
 
 </body>
+
+
 </html>
